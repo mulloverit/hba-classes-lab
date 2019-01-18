@@ -52,13 +52,20 @@ def make_melon_types():
     yellow.add_pairing(['ice cream'])
     all_melon_types.append(yellow)    
 
+    for melon in all_melon_types:
+        attr = vars(melon)
+        print(attr)
+        print()
+
     return all_melon_types
 
-def print_pairing_info(melon_types):
+def print_pairing_info(all_melon_types):
     """Prints information about each melon type's pairings."""
 
-    for self.name in MelonTypes:
-        print(f"{self.name} pairs wtih {self.pairings}")
+    for melon in all_melon_types:
+        print(f'{self.name} pairs with {self.pairings}')
+
+
 
 def make_melon_type_lookup(melon_types):
     """Takes a list of MelonTypes and returns a dictionary of melon type by code."""
@@ -87,3 +94,5 @@ def get_sellability_report(melons):
 
 
 
+if __name__ == '__main__':
+    make_melon_types()
